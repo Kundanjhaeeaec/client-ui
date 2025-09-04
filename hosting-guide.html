@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellivia Website Hosting Guide</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        h1 {
+            color: #10b981;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #047857;
+            border-bottom: 2px solid #d1fae5;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #059669;
+            margin-top: 25px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+            margin: 20px 0;
+        }
+        
+        .cost-summary {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid #d1fae5;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #d1fae5;
+        }
+        
+        th {
+            background: #d1fae5;
+            color: #047857;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background: #f0fdf4;
+        }
+        
+        .pros-cons {
+            display: flex;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .pros, .cons {
+            flex: 1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .pros {
+            background: #d1fae5;
+            border-left: 4px solid #10b981;
+        }
+        
+        .cons {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+        }
+        
+        .step-list {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .step-list ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .step-list li {
+            margin: 8px 0;
+            font-weight: 500;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #475569;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d1fae5;
+            text-align: center;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        @media print {
+            body { margin: 0; padding: 15px; }
+            .highlight, .cost-summary { page-break-inside: avoid; }
+            h2 { page-break-after: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Intellivia Website Hosting Guide</h1>
+
+    <div class="highlight">
+        <h2>Executive Summary</h2>
+        <p>This guide provides cost-effective hosting recommendations for your React-based Intellivia website, targeting a total annual cost of under $15 with professional features.</p>
+    </div>
+
+    <div class="cost-summary">
+        <h2>Recommended Solution: Netlify + Porkbun</h2>
+        <h3 style="color: #10b981; margin: 10px 0;">Total Annual Cost: ~$9</h3>
+        <ul style="list-style: none; padding: 0; margin: 15px 0;">
+            <li><strong>Domain:</strong> Porkbun - $8.18/year (.com)</li>
+            <li><strong>Hosting:</strong> Netlify - Free tier</li>
+            <li><strong>Email:</strong> Gmail forwarding - Free</li>
+        </ul>
+    </div>
+
+    <h2>Domain Registrar Comparison</h2>
+
+    <h3>Porkbun (Recommended)</h3>
+    <p><strong>.com domain:</strong> $8.18/year</p>
+    <div class="pros-cons">
+        <div class="pros">
+            <h4>Pros:</h4>
+            <ul>
+                <li>Excellent pricing</li>
+                <li>Free WHOIS privacy</li>
+                <li>Good customer support</li>
+                <li>Clean, user-friendly interface</li>
+            </ul>
+        </div>
+        <div class="cons">
+            <h4>Cons:</h4>
+            <ul>
+                <li>Smaller company (but reputable)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Namecheap</h3>
+    <p><strong>.com domain:</strong> $13.98/year</p>
+    <div class="pros-cons">
+        <div class="pros">
+            <h4>Pros:</h4>
+            <ul>
+                <li>Well-established</li>
+                <li>Good customer support</li>
+                <li>Free WHOIS privacy</li>
+            </ul>
+        </div>
+        <div class="cons">
+            <h4>Cons:</h4>
+            <ul>
+                <li>Slightly more expensive</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Cloudflare</h3>
+    <p><strong>.com domain:</strong> $9.15/year</p>
+    <div class="pros-cons">
+        <div class="pros">
+            <h4>Pros:</h4>
+            <ul>
+                <li>At-cost pricing</li>
+                <li>Excellent DNS performance</li>
+                <li>Integrated with other Cloudflare services</li>
+            </ul>
+        </div>
+        <div class="cons">
+            <h4>Cons:</h4>
+            <ul>
+                <li>Must transfer domain after 60 days (can't register directly)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="warning">
+        <h4>Avoid These Registrars:</h4>
+        <ul>
+            <li><strong>GoDaddy:</strong> Expensive renewals, aggressive upselling</li>
+            <li><strong>Domain.com:</strong> Higher prices, complicated interface</li>
+        </ul>
+    </div>
+
+    <h2>Hosting Platform Comparison</h2>
+
+    <h3>Netlify (Recommended)</h3>
+    <p><strong>Cost:</strong> Free tier sufficient for your needs</p>
+    <p><strong>Features:</strong></p>
+    <ul>
+        <li>100GB bandwidth/month</li>
+        <li>Automatic deployments from Git</li>
+        <li>Built-in CDN</li>
+        <li>Custom domain support</li>
+        <li>SSL certificates (free)</li>
+        <li>Contact form handling (100 submissions/month)</li>
+    </ul>
+    <p><strong>Perfect for:</strong> React/Vite applications</p>
+
+    <h3>Other Options</h3>
+    <p><strong>Vercel:</strong> Free tier, similar features to Netlify, excellent Next.js integration</p>
+    <p><strong>GitHub Pages:</strong> Free but limited features, works for static sites only</p>
+    <p><strong>Traditional Hosting:</strong> $36-60/year, overkill for React sites</p>
+
+    <h2>Email Solutions</h2>
+
+    <h3>Option 1: Gmail Forwarding (Recommended - Free)</h3>
+    <div class="step-list">
+        <ol>
+            <li>Set up email forwarding at domain registrar</li>
+            <li>Forward info@yourdomain.com → your.gmail@gmail.com</li>
+            <li>Send emails from Gmail using your domain name</li>
+        </ol>
+    </div>
+
+    <h3>Option 2: Gmail Workspace</h3>
+    <p><strong>Cost:</strong> $6/month ($72/year)</p>
+    <p><strong>Features:</strong> Professional email, Google Drive, Calendar</p>
+
+    <h3>Option 3: Zoho Mail</h3>
+    <p><strong>Cost:</strong> Free for 1 user (5GB storage)</p>
+    <p><strong>Upgrade:</strong> $1/month for more storage</p>
+
+    <h2>Step-by-Step Setup Process</h2>
+
+    <h3>Phase 1: Domain Purchase</h3>
+    <div class="step-list">
+        <ol>
+            <li>Visit Porkbun.com</li>
+            <li>Search for your desired domain</li>
+            <li>Add to cart (should be around $8.18 for .com)</li>
+            <li>Complete purchase</li>
+            <li>Verify WHOIS privacy is enabled (should be automatic)</li>
+        </ol>
+    </div>
+
+    <h3>Phase 2: Netlify Setup</h3>
+    <div class="step-list">
+        <ol>
+            <li>Create Netlify account (free)</li>
+            <li>Connect your GitHub repository</li>
+            <li>Configure build settings:
+                <ul>
+                    <li>Build command: <code>npm run build</code></li>
+                    <li>Publish directory: <code>dist</code></li>
+                </ul>
+            </li>
+            <li>Deploy site (will get temporary netlify.app URL)</li>
+        </ol>
+    </div>
+
+    <h3>Phase 3: Domain Connection</h3>
+    <div class="step-list">
+        <ol>
+            <li>In Netlify dashboard:
+                <ul>
+                    <li>Go to Domain settings</li>
+                    <li>Add your custom domain</li>
+                    <li>Note the DNS records Netlify provides</li>
+                </ul>
+            </li>
+            <li>In Porkbun dashboard:
+                <ul>
+                    <li>Go to DNS settings</li>
+                    <li>Add the DNS records from Netlify</li>
+                    <li>Wait 24-48 hours for propagation</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h3>Phase 4: Email Setup</h3>
+    <div class="step-list">
+        <ol>
+            <li>In Porkbun DNS settings:
+                <ul>
+                    <li>Add MX record for Gmail forwarding</li>
+                    <li>Add CNAME for email forwarding</li>
+                </ul>
+            </li>
+            <li>Test email forwarding</li>
+            <li>Configure Gmail to send from your domain</li>
+        </ol>
+    </div>
+
+    <h2>Cost Breakdown Summary</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Provider</th>
+                <th>Annual Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Domain</td>
+                <td>Porkbun</td>
+                <td>$8.18</td>
+            </tr>
+            <tr>
+                <td>Hosting</td>
+                <td>Netlify</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>Gmail Forwarding</td>
+                <td>$0</td>
+            </tr>
+            <tr style="background: #d1fae5; font-weight: bold;">
+                <td><strong>Total</strong></td>
+                <td></td>
+                <td><strong>$8.18</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Performance Expectations</h2>
+
+    <h3>Netlify Free Tier Limits</h3>
+    <ul>
+        <li><strong>Bandwidth:</strong> 100GB/month</li>
+        <li><strong>Build minutes:</strong> 300/month</li>
+        <li><strong>Storage:</strong> 100GB</li>
+        <li><strong>Sites:</strong> Unlimited</li>
+    </ul>
+
+    <h3>Traffic Estimates</h3>
+    <ul>
+        <li><strong>Average page size:</strong> ~2MB (React app)</li>
+        <li><strong>Monthly visitors supported:</strong> ~50,000 page views</li>
+        <li><strong>Typical business site:</strong> Uses &lt;10GB/month</li>
+    </ul>
+
+    <h2>Security Features Included</h2>
+
+    <h3>SSL Certificates</h3>
+    <ul>
+        <li><strong>Automatic:</strong> Let's Encrypt certificates</li>
+        <li><strong>Renewal:</strong> Automatic</li>
+        <li><strong>Cost:</strong> Free</li>
+    </ul>
+
+    <h3>Additional Security</h3>
+    <ul>
+        <li><strong>DDoS Protection:</strong> Built-in with Netlify</li>
+        <li><strong>Backup Strategy:</strong> Git repository + deployment history</li>
+        <li><strong>Domain Security:</strong> Keep registrar account secure</li>
+    </ul>
+
+    <h2>Long-term Considerations</h2>
+
+    <h3>Scaling Up</h3>
+    <ul>
+        <li><strong>More traffic:</strong> Netlify Pro ($19/month) when needed</li>
+        <li><strong>Team features:</strong> Add collaborators as business grows</li>
+        <li><strong>Advanced email:</strong> Upgrade to Gmail Workspace</li>
+    </ul>
+
+    <h3>Cost Monitoring</h3>
+    <ul>
+        <li><strong>Annual domain renewal:</strong> Mark calendar for renewal</li>
+        <li><strong>Traffic monitoring:</strong> Watch Netlify analytics</li>
+        <li><strong>Feature usage:</strong> Monitor contact form submissions</li>
+    </ul>
+
+    <div class="highlight">
+        <h2>Conclusion</h2>
+        <p>The Porkbun + Netlify combination provides:</p>
+        <ul>
+            <li><strong>Professional appearance:</strong> Custom domain with SSL</li>
+            <li><strong>Excellent performance:</strong> Global CDN and fast loading</li>
+            <li><strong>Easy deployment:</strong> Automatic from Git commits</li>
+            <li><strong>Minimal cost:</strong> Under $10/year</li>
+            <li><strong>Scalability:</strong> Can grow with your business</li>
+        </ul>
+        <p>This setup is perfect for a tutoring business website and provides all the professional features you need at an extremely reasonable cost.</p>
+    </div>
+
+    <div class="footer">
+        <p>Generated on September 3, 2025<br>
+        For: Intellivia Website Project</p>
+    </div>
+</body>
+</html>
