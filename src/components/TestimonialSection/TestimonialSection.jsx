@@ -93,7 +93,7 @@ const TestimonialSection = () => {
 
         <div className="testimonial-carousel">
           <button className="testimonial-nav prev" onClick={prevTestimonial} aria-label="Previous testimonial">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="15,18 9,12 15,6"></polyline>
             </svg>
           </button>
@@ -130,7 +130,7 @@ const TestimonialSection = () => {
           </div>
 
           <button className="testimonial-nav next" onClick={nextTestimonial} aria-label="Next testimonial">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="9,18 15,12 9,6"></polyline>
             </svg>
           </button>

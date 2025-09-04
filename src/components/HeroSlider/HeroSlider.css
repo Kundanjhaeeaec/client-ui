@@ -10,6 +10,15 @@
   justify-content: center;
 }
 
+/* Show arrows on hover over the slider */
+.hero-slider:hover .slider-btn {
+  opacity: 0.8;
+}
+
+.hero-slider:hover .slider-btn:hover {
+  opacity: 1;
+}
+
 .slide {
   position: absolute;
   top: 0;
@@ -92,36 +101,38 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.25);
-  border: 2px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
   font-size: 1.2rem;
-  width: 70px;
-  height: 70px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 3;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   font-weight: normal;
-  opacity: 0.9;
+  opacity: 0.4;
 }
 
 .slider-btn svg {
   transition: all 0.3s ease;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+  width: 32px;
+  height: 32px;
 }
 
 .slider-btn:hover {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.9);
   color: #10b981;
   border-color: rgba(255, 255, 255, 0.8);
-  transform: translateY(-50%) scale(1.15);
-  box-shadow: 0 12px 40px rgba(16, 185, 129, 0.2);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.15);
   opacity: 1;
 }
 
@@ -136,11 +147,11 @@
 }
 
 .prev-btn {
-  left: 2rem;
+  left: 1.5rem;
 }
 
 .next-btn {
-  right: 2rem;
+  right: 1.5rem;
 }
 
 /* Dots Navigation */
@@ -197,23 +208,41 @@
   }
   
   .slider-btn {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.35);
-    border: 3px solid rgba(255, 255, 255, 0.5);
+    width: 68px;
+    height: 68px;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    opacity: 0.8;
+    /* Ensure minimum touch target size for accessibility */
+    min-width: 44px;
+    min-height: 44px;
   }
   
   .slider-btn svg {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  /* Enhanced mobile hover/touch states */
+  .slider-btn:hover,
+  .slider-btn:focus {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-50%) scale(1.05);
+    opacity: 1;
+  }
+  
+  /* Always show on mobile for better accessibility */
+  .hero-slider .slider-btn {
+    opacity: 0.8;
   }
   
   .prev-btn {
-    left: 1rem;
+    left: 1.2rem;
   }
   
   .next-btn {
-    right: 1rem;
+    right: 1.2rem;
   }
   
   .slider-dots {
@@ -244,24 +273,44 @@
   }
   
   .slider-btn {
-    width: 55px;
-    height: 55px;
-    background: rgba(255, 255, 255, 0.4);
-    border: 3px solid rgba(255, 255, 255, 0.6);
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0.85;
+    /* Ensure minimum touch target size for accessibility */
+    min-width: 44px;
+    min-height: 44px;
   }
   
   .slider-btn svg {
-    width: 26px;
-    height: 26px;
-    stroke-width: 3;
+    width: 38px;
+    height: 38px;
+    stroke-width: 2.5;
+  }
+  
+  /* Enhanced mobile hover/touch states */
+  .slider-btn:hover,
+  .slider-btn:focus,
+  .slider-btn:active {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.95);
+    transform: translateY(-50%) scale(1.05);
+    color: #10b981;
+    opacity: 1;
+  }
+  
+  /* Always show on small mobile for better accessibility */
+  .hero-slider .slider-btn {
+    opacity: 0.85;
   }
   
   .prev-btn {
-    left: 0.8rem;
+    left: 1rem;
   }
   
   .next-btn {
-    right: 0.8rem;
+    right: 1rem;
   }
   
   .cta-btn {
