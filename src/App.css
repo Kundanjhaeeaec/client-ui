@@ -5,8 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Force consistent color scheme across all devices */
+*, *::before, *::after {
+  color-scheme: light !important;
+}
+
 html {
   scroll-behavior: smooth;
+  color-scheme: light !important;
 }
 
 body {
@@ -15,6 +21,29 @@ body {
   background: #f8f9fa;
   color: #2d2f31;
   line-height: 1.6;
+  color-scheme: light !important;
+}
+
+/* Prevent mobile browser auto-styling of inputs */
+input, textarea, select {
+  color-scheme: light !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+/* Mobile-specific input fixes */
+@media (max-width: 768px) {
+  input, textarea, select {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
+  }
 }
 
 .container {

@@ -325,6 +325,8 @@
   transition: all 0.3s ease !important;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
   background: white !important;
+  color: #2d2f31 !important;
+  -webkit-text-fill-color: #2d2f31 !important;
 }
 
 .react-chatbot-kit-chat-input:focus {
@@ -336,6 +338,7 @@
 .react-chatbot-kit-chat-input::placeholder {
   color: #9ca3af !important;
   font-style: italic !important;
+  -webkit-text-fill-color: #9ca3af !important;
 }
 
 .react-chatbot-kit-chat-btn-send {
@@ -460,6 +463,20 @@
   
   .react-chatbot-kit-chat-btn-send::before {
     font-size: 22px !important;
+  }
+  
+  /* Force text color for mobile devices to ensure visibility */
+  .react-chatbot-kit-chat-input {
+    color: #2d2f31 !important;
+    background: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  .react-chatbot-kit-chat-input::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
   }
 }
 

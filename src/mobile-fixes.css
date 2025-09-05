@@ -1,0 +1,152 @@
+/* Mobile-specific fixes for text visibility issues */
+/* This file ensures that text is always visible on mobile devices */
+
+/* Force light color scheme on all elements to prevent dark mode auto-styling */
+:root {
+  color-scheme: light !important;
+}
+
+*, *::before, *::after {
+  color-scheme: light !important;
+}
+
+/* Global fix for all inputs on all screen sizes first */
+input, 
+textarea, 
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+  color: #2d2f31 !important;
+  background-color: white !important;
+  -webkit-text-fill-color: #2d2f31 !important;
+}
+
+/* Placeholder text fixes for all screen sizes */
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+  -webkit-text-fill-color: #9ca3af !important;
+  opacity: 1 !important;
+}
+
+/* Mobile input and textarea fixes */
+@media (max-width: 768px) {
+  /* Global input styling for mobile */
+  input, 
+  textarea, 
+  select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    font-family: inherit !important;
+  }
+  
+  /* Placeholder text fixes */
+  input::placeholder,
+  textarea::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
+    opacity: 1 !important;
+  }
+  
+  /* Contact form specific fixes */
+  .form-group input,
+  .form-group textarea,
+  .form-group select,
+  .country-code-select,
+  .phone-number-input {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+  }
+  
+  /* Chatbot input fixes */
+  .react-chatbot-kit-chat-input {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border: 2px solid #e4e4e7 !important;
+  }
+  
+  .react-chatbot-kit-chat-input::placeholder {
+    color: #9ca3af !important;
+    -webkit-text-fill-color: #9ca3af !important;
+    opacity: 1 !important;
+  }
+  
+  /* Prevent any dark theme styling */
+  .react-chatbot-kit-chat-input:focus {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+  }
+  
+  /* CAPTCHA input fixes */
+  .captcha-container input {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+  }
+  
+  /* Prevent iOS Safari from auto-styling inputs */
+  input:not([type="submit"]):not([type="button"]):not([type="reset"]) {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    border-radius: 8px !important;
+  }
+  
+  /* Prevent Android Chrome from auto-styling inputs */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+    color: #2d2f31 !important;
+  }
+  
+  /* Override any system dark mode preferences */
+  @media (prefers-color-scheme: dark) {
+    input, textarea, select {
+      color: #2d2f31 !important;
+      background-color: white !important;
+      -webkit-text-fill-color: #2d2f31 !important;
+    }
+    
+    .react-chatbot-kit-chat-input {
+      color: #2d2f31 !important;
+      background-color: white !important;
+      -webkit-text-fill-color: #2d2f31 !important;
+    }
+  }
+}
+
+/* Additional high-specificity rules for stubborn mobile browsers */
+@media (max-width: 768px) {
+  /* Use !important with high specificity to override any other styles */
+  body input:not([type="submit"]):not([type="button"]):not([type="reset"]),
+  body textarea,
+  body select {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+  }
+  
+  body .react-chatbot-kit-chat-input {
+    color: #2d2f31 !important;
+    background-color: white !important;
+    -webkit-text-fill-color: #2d2f31 !important;
+  }
+}
